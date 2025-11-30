@@ -169,11 +169,18 @@
 </style>
 
 <script>
-  // Iniciar video desde el segundo 6
+  // Iniciar video desde el segundo 6 y hacer loop desde el segundo 6
   const video = document.getElementById('heroVideo') as HTMLVideoElement;
   if (video) {
     video.addEventListener('loadedmetadata', () => {
       video.currentTime = 6;
+    });
+    
+    // Cuando el video llegue casi al final, volver al segundo 6
+    video.addEventListener('timeupdate', () => {
+      if (video.currentTime >= video.duration - 0.5) {
+        video.currentTime = 6;
+      }
     });
   }
 </script>
