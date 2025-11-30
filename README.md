@@ -97,13 +97,4 @@ git push origin feature/nueva-funcionalidad
 ```
 4. Crea un Pull Request.
 
----
 
-# 📜 Licencia
-
-Este proyecto se distribuye bajo la licencia que elijas (MIT recomendada).  
-Puedes modificar libremente los archivos según tus necesidades.
-
----
-
-Si quieres, te hago una versión **más técnica**, **minimalista**, o incluso adaptada al estándar de **README profesional de GitHub**.
