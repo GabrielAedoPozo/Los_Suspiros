@@ -1,126 +1,32 @@
 <main class="relative w-full h-screen m-0 p-0 overflow-hidden">
 
-  <!-- Video de fondo -->
+  <!-- Imagen de fondo -->
   <div class="absolute inset-0 w-full h-full">
-    <img src="/Los_Suspiros/img/img2.jpg" alt="">
+    <img src="/Los_Suspiros/img/img2.jpg" alt="" class="w-full h-full object-cover">
   </div>
 
-  <!-- Overlay con gradiente dinámico -->
-  <div class="absolute inset-0 bg-black/35 z-10"></div>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/40 z-10"></div>
   
   <div class="relative z-20 flex items-center justify-center h-full px-8">
-    <div class="flex flex-col items-start text-left space-y-6 max-w-4xl">
-      <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight drop-shadow-2xl">
-        Reconecta con la<br>
-        Naturaleza en<br>
-        Los Suspiros
+    <div class="text-center space-y-8">
+
+
+
+      <h1 class="text-white text-5xl md:text-6xl lg:text-7xl font-light leading-tight drop-shadow-2xl">
+        Simplemente Relájate.
       </h1>
-      
-      <p class="text-white text-base md:text-lg font-light leading-relaxed drop-shadow-lg">
-        Escapa del estrés diario en nuestro hospedaje rústico en Chincha.<br>
-        Disfruta de la tranquilidad, piscina refrescante y la belleza natural.
-      </p>
+            
 
-      <div class="flex flex-col sm:flex-row gap-4 pt-4">
-        <button class="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3.5 font-semibold transition-all duration-300 shadow-lg hover:shadow-cyan-600/50">
-          Reserva Tu Estadía
-        </button>
-        <button class="border-2 border-white bg-white text-cyan-700 hover:bg-white/90 px-8 py-3.5 font-semibold transition-all duration-300 shadow-lg">
-          Ver Galería
-        </button>
-      </div>
-
-      <div class="flex items-center gap-2 text-white text-sm pt-2">
-        <div class="w-2 h-2 bg-white rounded-full"></div>
-        <span class="font-light italic">Disponibilidad limitada - Reserva hoy</span>
+      <!-- Indicador de scroll -->
+      <div class="flex flex-col items-center gap-2 pt-8 animate-bounce">
+        <span class="text-white/70 text-sm font-light">Descubre más</span>
+        <svg class="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
       </div>
     </div>
   </div>
 
 </main>
-
-<!-- Sección de Imágenes -->
-<section class="w-full pt-10">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
-    <div class="overflow-hidden">
-      <img src="/Los_Suspiros/img/imgm1.jpg" alt="Los Suspiros" class="w-full h-full object-cover" />
-    </div>
-    <div class="overflow-hidden">
-      <img src="/Los_Suspiros/img/imgm2.jpg" alt="Los Suspiros" class="w-full h-full object-cover" />
-    </div>
-    <div class="overflow-hidden">
-      <img src="/Los_Suspiros/img/imgm3.jpg" alt="Los Suspiros" class="w-full h-full object-cover" />
-    </div>
-  </div>
-</section>
-
-<style>
-  .slideshow {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-    z-index: 1;
-  }
-  
-  .slide.active {
-    opacity: 1;
-    z-index: 2;
-  }
-
-  @keyframes fade-in {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  @keyframes fade-in-down {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  @keyframes fade-in-up {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  .animate-fade-in {
-    animation: fade-in 0.8s ease-out forwards;
-  }
-  
-  .animate-fade-in-down {
-    animation: fade-in-down 0.8s ease-out forwards;
-  }
-  
-  .animate-fade-in-up {
-    animation: fade-in-up 0.8s ease-out 0.3s forwards;
-    opacity: 0;
-  }
-</style>
-
-<script>
-  // Iniciar video desde el segundo 6 y hacer loop desde el segundo 6
-  const video = document.getElementById('heroVideo') as HTMLVideoElement;
-  if (video) {
-    video.addEventListener('loadedmetadata', () => {
-      video.currentTime = 6;
-    });
-    
-    // Cuando el video llegue casi al final, volver al segundo 6
-    video.addEventListener('timeupdate', () => {
-      if (video.currentTime >= video.duration - 0.5) {
-        video.currentTime = 6;
-      }
-    });
-  }
-</script>
 
